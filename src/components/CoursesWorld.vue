@@ -135,26 +135,7 @@ export default {
       responseA: [],
       rowsa: [],
       data: null,
-      plansz: [
-        { fields: { Hole: 2, Fairway: 9 } },
-        { fields: { Hole: 13, Fairway: 10 } },
-        { fields: { Hole: 15, Fairway: 10 } },
-        { fields: { Hole: 4, Fairway: 10 } },
-        { fields: { Hole: 8, Fairway: 11 } },
-        { fields: { Hole: 1, Fairway: 10 } },
-        { fields: { Hole: 9, Fairway: 8 } },
-        { fields: { Hole: 12, Fairway: 12 } },
-        { fields: { Hole: 18, Fairway: 8 } },
-        { fields: { Hole: 14, Fairway: 10 } },
-        { fields: { Hole: 6, Fairway: 10 } },
-        { fields: { Hole: 10, Fairway: 10 } },
-        { fields: { Hole: 7, Fairway: 10 } },
-        { fields: { Hole: null, Fairway: 9 } },
-        { fields: { Hole: 17, Fairway: 11 } },
-        { fields: { Hole: 5, Fairway: 10 } },
-        { fields: { Hole: 16, Fairway: 10 } },
-        { fields: { Hole: 3, Fairway: 12 } },
-      ],
+      
     };
   },
   created: function () {
@@ -207,7 +188,6 @@ export default {
             console.log("Success:", data);
             //responseA.value = response.data.data.queryWaterplan.records.map(records => records.fields)
 
-            //  console.log(responseA);
           });
       } finally {
         console.log(query);
@@ -216,7 +196,7 @@ export default {
 
     mapToRows() {
       this.rowsa = this.responseA.queryWaterplan.records // <- this is an Array
-        // and map each edge into its node attribute
+        // and map each record into its node attribute
         .map((records) => records.fields); //
       console.log(this.rowsa);
     },
