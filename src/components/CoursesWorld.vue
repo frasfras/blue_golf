@@ -147,7 +147,7 @@ export default {
     //   this.loadPlan();
   },
   mounted: function () {
-    //this.loadPlan();
+   
     this.fetchPlan();
   },
   methods: {
