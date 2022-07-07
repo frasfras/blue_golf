@@ -112,7 +112,6 @@ export default {
       type: Array,
       default: function () {
         return [
-          "What is artificial intelligence?",
           "What is natural language processing?",
         ];
       },
